@@ -3,30 +3,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
       html, body { font-family: 'Roboto', sans-serif; background-color: black; color: white; }
-      td { vertical-align: top; }
-      h1 { font-size: 16px; font-weight: bold; margin: 0; }
-      p { font-size: 14px; margin-top: 0; }
+      
+      h1, h2, h3, h4, h5, h6, p {
+        margin: 0px;
+      }
+      
+      .metric {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 18px;
+        margin-top: 20px;
+      }
+      .metric p {
+        font-size: 28px;
+      }
+      .metric-summary {
+        margin-left: 12px;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0%;
+      }
+      .metric-summary-headline {
+        color: rgb(255, 255, 255);
+        line-height: 20px;
+      }
+      .metric-summary-headline p {
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 0.4px;
+        font-weight: 600;
+      }
+      .metric-summary-status {
+        color: rgb(140, 140, 140);
+        margin-top: 4px;
+      }
+      .metric-summary-status p {
+        font-size: 14px;
+      }
       .color-green { color: green; }
       .color-amber { color: orange; }
       .color-red { color: red; }
     </style>
   </head>
   <body>
-    <table>
-      <tr>
-        <td class="color-green">✓</td>
-        <td>
-          <h1>Stability of Hospitalizations</h1>
-          <p class="color-green">Numbers are satisfactory</p>
-        </td>
-      </tr>
-      <tr>
-        <td class="color-red">✗</td>
-        <td>
-          <h1>Personal Protective Equipment Inventory</h1>
-          <p class="color-red">Numbers are not increasing</p>
-        </td>
-      </tr>
-    </table>
+    <div>
+      <div class="metric">
+        <span class="color-green"><p>✓</p></span>
+        <div class="metric-summary">
+          <div class="metric-summary-headline"><p>Stability of Hospitalizations</p></div>
+          <div class="metric-summary-status color-green"><p>Numbers are satisfactory</p></div>
+        </div>
+      </div>
+    
+     <div class="metric">
+        <span class="color-red"><p>✓</p></span>
+        <div class="metric-summary">
+          <div class="metric-summary-headline"><p>Personal Protective Equipment Inventory</p></div>
+          <div class="metric-summary-status color-red"><p>Numbers are not increasing</p></div>
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>
