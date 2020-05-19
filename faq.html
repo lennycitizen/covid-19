@@ -1,5 +1,7 @@
 <html>
   <head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, viewport-fit=contain">
+    <link rel="stylesheet" href="https://citizen.com/_next/static/css/styles.b2a08096.chunk.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
       html, body { font-family: 'Roboto', sans-serif; background-color: black; color: white; margin: 250px 20px 0 20px; }
@@ -40,29 +42,34 @@
       .metric-summary-status p {
         font-size: 14px;
       }
+      .metric img {
+        max-height: 40px;
+        width: auto;
+      }
       .color-green { color: green; }
       .color-amber { color: orange; }
       .color-red { color: red; }
     </style>
   </head>
   <body>
-    <div>
-      <div class="metric">
-        <span class="color-green"><p>✓</p></span>
-        <div class="metric-summary">
-          <div class="metric-summary-headline"><p>Stability of Hospitalizations</p></div>
-          <div class="metric-summary-status color-green"><p>Numbers are satisfactory</p></div>
+    <div style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+      <div>
+        <div class="metric">
+          <img src="https://storage.googleapis.com/covid_infographics/icon_green_check.png" />
+          <div class="metric-summary">
+            <div class="metric-summary-headline"><p>Stability of Hospitalizations</p></div>
+            <div class="metric-summary-status color-green"><p>Numbers are satisfactory</p></div>
+          </div>
+        </div>
+
+       <div class="metric">
+          <img src="https://storage.googleapis.com/covid_infographics/icon_red_x.png" />
+          <div class="metric-summary">
+            <div class="metric-summary-headline"><p>Personal Protective Equipment Inventory</p></div>
+            <div class="metric-summary-status color-red"><p>Numbers are not increasing</p></div>
+          </div>
         </div>
       </div>
-    
-     <div class="metric">
-        <span class="color-red"><p>✓</p></span>
-        <div class="metric-summary">
-          <div class="metric-summary-headline"><p>Personal Protective Equipment Inventory</p></div>
-          <div class="metric-summary-status color-red"><p>Numbers are not increasing</p></div>
-        </div>
       </div>
-    </div>
-    
   </body>
 </html>
